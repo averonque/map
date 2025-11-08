@@ -1,16 +1,15 @@
-FROM debian:bullseye
+FROM ubuntu:22.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     python3-dev \
-    libgrib-api-dev \
+    libeccodes-dev \
     libjasper-dev \
     libopenjp2-7 \
     gcc \
     gfortran \
-    libeccodes0 \
     cython \
     && rm -rf /var/lib/apt/lists/*
 
